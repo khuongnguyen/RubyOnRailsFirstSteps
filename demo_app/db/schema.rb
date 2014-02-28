@@ -11,24 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140219105519) do
-
-  create_table "comments", id: false, force: true do |t|
-    t.integer  "id"
-    t.string "title", limit: 220
-    t.string "post",  limit: 45
-  end
-
-  create_table "microposts", force: true do |t|
-    t.string   "content"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "user", primary_key: "Id", force: true do |t|
-    t.string "Name", limit: 45, null: false
-  end
+ActiveRecord::Schema.define(version: 20140226105141) do
 
   create_table "users", force: true do |t|
     t.string   "name"
@@ -36,5 +19,7 @@ ActiveRecord::Schema.define(version: 20140219105519) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
 end
