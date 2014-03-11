@@ -2,7 +2,17 @@ DemoApp::Application.routes.draw do
   
   
 
-  root  'static_pages#home'
+  resources :line_items
+
+  resources :carts
+
+  get "store/index"
+  resources :products
+
+  get "say/hello"
+  get "say/goodbye"
+  #root  'static_pages#home'
+  root  'store#index'
   get "static_pages/home"
 
   match '/contact', to: 'static_pages#contact', via: 'get'
