@@ -1,6 +1,5 @@
 class CartsController < ApplicationController
-  before_action :set_cart, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_cart, only: [:edit, :update, :destroy]
   # GET /carts
   # GET /carts.json
   def index
@@ -10,6 +9,18 @@ class CartsController < ApplicationController
   # GET /carts/1
   # GET /carts/1.json
   def show
+
+    begin
+      @cart = Cart.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      logger.error "Attempt to access invalid cart #{params[:id]}"
+      redirect_to store_url, :notice => 'Invalid cart'
+    else
+      respond_to do |format|
+        format.html # show.html.erb
+        format.xml { render :xml => @cart }
+      end
+    end
   end
 
   # GET /carts/new
@@ -54,21 +65,24 @@ class CartsController < ApplicationController
   # DELETE /carts/1
   # DELETE /carts/1.json
   def destroy
-    @cart.destroy
+    @cart = current_cart
+    @cart.destroy if @cart.id == session[:cart_id]
+    session[:cart_id] = nil
     respond_to do |format|
-      format.html { redirect_to carts_url }
+      format.html { redirect_to store_url }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_cart
-      @cart = Cart.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def cart_params
-      params[:cart]
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_cart
+    @cart = Cart.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def cart_params
+    params[:cart]
+  end
 end

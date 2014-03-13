@@ -2,6 +2,8 @@ DemoApp::Application.routes.draw do
   
   
 
+  resources :orders
+
   resources :line_items
 
   resources :carts
@@ -12,7 +14,7 @@ DemoApp::Application.routes.draw do
   get "say/hello"
   get "say/goodbye"
   #root  'static_pages#home'
-  root  'store#index'
+  root  'store#index', :as => 'store'
   get "static_pages/home"
 
   match '/contact', to: 'static_pages#contact', via: 'get'
