@@ -1,0 +1,760 @@
+  [1m[36m (76.0ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(10,0), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (24.0ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "password_digest" varchar(255), "remember_token" varchar(255)) 
+  [1m[36m (25.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (24.0ms)[0m  CREATE INDEX "index_users_on_remember_token" ON "users" ("remember_token")
+  [1m[36m (37.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (25.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (50.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140310091015')
+  [1m[36m (25.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140219040027')[0m
+  [1m[35m (26.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140226105141')
+  [1m[36m (28.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140306045206')[0m
+  [1m[35m (48.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140307044315')
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Unable to load comment, underlying cause No such file to load -- comment 
+
+ c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `require'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `block in require'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:214:in `load_dependency'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `require'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:330:in `require_or_load'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:289:in `depend_on'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:207:in `require_dependency'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.3/lib/active_record/fixtures.rb:773:in `try_to_load_dependency'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.3/lib/active_record/fixtures.rb:792:in `block in require_fixture_classes'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.3/lib/active_record/fixtures.rb:790:in `each'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.3/lib/active_record/fixtures.rb:790:in `require_fixture_classes'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.3/lib/active_record/fixtures.rb:768:in `fixtures'
+D:/RubyOnRailsFirstSteps/demo_app/test/test_helper.rb:12:in `<class:TestCase>'
+D:/RubyOnRailsFirstSteps/demo_app/test/test_helper.rb:5:in `<top (required)>'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `require'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `block in require'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:214:in `load_dependency'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `require'
+D:/RubyOnRailsFirstSteps/demo_app/test/helpers/comments_helper_test.rb:1:in `<top (required)>'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `require'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `block in require'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:214:in `load_dependency'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `require'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/test_unit/sub_test_task.rb:73:in `block (3 levels) in define'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/test_unit/sub_test_task.rb:73:in `each'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/test_unit/sub_test_task.rb:73:in `block (2 levels) in define'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/test_unit/sub_test_task.rb:72:in `each'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/test_unit/sub_test_task.rb:72:in `block in define'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:236:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:236:in `block in execute'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:231:in `each'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:231:in `execute'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:175:in `block in invoke_with_call_chain'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:168:in `invoke_with_call_chain'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:197:in `block in invoke_prerequisites'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:195:in `each'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:195:in `invoke_prerequisites'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:174:in `block in invoke_with_call_chain'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:168:in `invoke_with_call_chain'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:161:in `invoke'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/test_unit/testing.rake:61:in `block in <top (required)>'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:236:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:236:in `block in execute'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:231:in `each'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:231:in `execute'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:175:in `block in invoke_with_call_chain'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:168:in `invoke_with_call_chain'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:161:in `invoke'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:149:in `invoke_task'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:106:in `block (2 levels) in top_level'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:106:in `each'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:106:in `block in top_level'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:115:in `run_with_threads'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:100:in `top_level'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:78:in `block in run'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:165:in `standard_exception_handling'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:75:in `run'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/bin/rake:33:in `<top (required)>'
+c:/RailsInstaller/Ruby1.9.3/bin/rake:23:in `load'
+c:/RailsInstaller/Ruby1.9.3/bin/rake:23:in `<main>'
+Unable to load micropost, underlying cause No such file to load -- micropost 
+
+ c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `require'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `block in require'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:214:in `load_dependency'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `require'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:330:in `require_or_load'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:289:in `depend_on'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:207:in `require_dependency'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.3/lib/active_record/fixtures.rb:773:in `try_to_load_dependency'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.3/lib/active_record/fixtures.rb:792:in `block in require_fixture_classes'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.3/lib/active_record/fixtures.rb:790:in `each'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.3/lib/active_record/fixtures.rb:790:in `require_fixture_classes'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.3/lib/active_record/fixtures.rb:768:in `fixtures'
+D:/RubyOnRailsFirstSteps/demo_app/test/test_helper.rb:12:in `<class:TestCase>'
+D:/RubyOnRailsFirstSteps/demo_app/test/test_helper.rb:5:in `<top (required)>'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `require'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `block in require'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:214:in `load_dependency'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `require'
+D:/RubyOnRailsFirstSteps/demo_app/test/helpers/comments_helper_test.rb:1:in `<top (required)>'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `require'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `block in require'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:214:in `load_dependency'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `require'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/test_unit/sub_test_task.rb:73:in `block (3 levels) in define'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/test_unit/sub_test_task.rb:73:in `each'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/test_unit/sub_test_task.rb:73:in `block (2 levels) in define'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/test_unit/sub_test_task.rb:72:in `each'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/test_unit/sub_test_task.rb:72:in `block in define'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:236:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:236:in `block in execute'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:231:in `each'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:231:in `execute'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:175:in `block in invoke_with_call_chain'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:168:in `invoke_with_call_chain'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:197:in `block in invoke_prerequisites'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:195:in `each'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:195:in `invoke_prerequisites'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:174:in `block in invoke_with_call_chain'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:168:in `invoke_with_call_chain'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:161:in `invoke'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/test_unit/testing.rake:61:in `block in <top (required)>'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:236:in `call'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:236:in `block in execute'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:231:in `each'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:231:in `execute'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:175:in `block in invoke_with_call_chain'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:168:in `invoke_with_call_chain'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:161:in `invoke'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:149:in `invoke_task'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:106:in `block (2 levels) in top_level'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:106:in `each'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:106:in `block in top_level'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:115:in `run_with_threads'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:100:in `top_level'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:78:in `block in run'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:165:in `standard_exception_handling'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:75:in `run'
+c:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/bin/rake:33:in `<top (required)>'
+c:/RailsInstaller/Ruby1.9.3/bin/rake:23:in `load'
+c:/RailsInstaller/Ruby1.9.3/bin/rake:23:in `<main>'
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "comments"
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "comments"
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "comments"
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "comments"
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "comments"
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "comments"
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "comments"
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "comments"
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "comments"
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "comments"
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "comments"
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "comments"
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "comments"
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "comments"
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "comments"
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "comments"
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "comments"
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (40.0ms)[0m  [1mCREATE TABLE "carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (31.0ms)[0m  CREATE TABLE "line_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "cart_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (25.0ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "image_url" varchar(255), "price" decimal(10,0), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (24.0ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "password_digest" varchar(255), "remember_token" varchar(255)) 
+  [1m[36m (25.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (25.0ms)[0m  CREATE INDEX "index_users_on_remember_token" ON "users" ("remember_token")
+  [1m[36m (44.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (25.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (25.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140311033613')
+  [1m[36m (25.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140219040027')[0m
+  [1m[35m (26.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140226105141')
+  [1m[36m (25.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140306045206')[0m
+  [1m[35m (25.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140307044315')
+  [1m[36m (25.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140310091015')[0m
+  [1m[35m (25.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140311032223')
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Unable to load comment, underlying cause No such file to load -- comment 
+
+ C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `require'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `block in require'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:214:in `load_dependency'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `require'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:330:in `require_or_load'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:289:in `depend_on'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:207:in `require_dependency'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.3/lib/active_record/fixtures.rb:773:in `try_to_load_dependency'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.3/lib/active_record/fixtures.rb:792:in `block in require_fixture_classes'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.3/lib/active_record/fixtures.rb:790:in `each'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.3/lib/active_record/fixtures.rb:790:in `require_fixture_classes'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.3/lib/active_record/fixtures.rb:768:in `fixtures'
+D:/RubyOnRailsFirstSteps/demo_app/test/test_helper.rb:12:in `<class:TestCase>'
+D:/RubyOnRailsFirstSteps/demo_app/test/test_helper.rb:5:in `<top (required)>'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `require'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `block in require'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:214:in `load_dependency'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `require'
+D:/RubyOnRailsFirstSteps/demo_app/test/helpers/carts_helper_test.rb:1:in `<top (required)>'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `require'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `block in require'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:214:in `load_dependency'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `require'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/test_unit/sub_test_task.rb:73:in `block (3 levels) in define'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/test_unit/sub_test_task.rb:73:in `each'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/test_unit/sub_test_task.rb:73:in `block (2 levels) in define'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/test_unit/sub_test_task.rb:72:in `each'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/test_unit/sub_test_task.rb:72:in `block in define'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:236:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:236:in `block in execute'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:231:in `each'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:231:in `execute'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:175:in `block in invoke_with_call_chain'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:168:in `invoke_with_call_chain'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:197:in `block in invoke_prerequisites'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:195:in `each'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:195:in `invoke_prerequisites'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:174:in `block in invoke_with_call_chain'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:168:in `invoke_with_call_chain'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:161:in `invoke'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/test_unit/testing.rake:61:in `block in <top (required)>'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:236:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:236:in `block in execute'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:231:in `each'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:231:in `execute'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:175:in `block in invoke_with_call_chain'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:168:in `invoke_with_call_chain'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:161:in `invoke'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:149:in `invoke_task'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:106:in `block (2 levels) in top_level'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:106:in `each'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:106:in `block in top_level'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:115:in `run_with_threads'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:100:in `top_level'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:78:in `block in run'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:165:in `standard_exception_handling'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:75:in `run'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/bin/rake:33:in `<top (required)>'
+C:/RailsInstaller/Ruby1.9.3/bin/rake:23:in `load'
+C:/RailsInstaller/Ruby1.9.3/bin/rake:23:in `<main>'
+Unable to load micropost, underlying cause No such file to load -- micropost 
+
+ C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `require'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `block in require'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:214:in `load_dependency'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `require'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:330:in `require_or_load'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:289:in `depend_on'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:207:in `require_dependency'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.3/lib/active_record/fixtures.rb:773:in `try_to_load_dependency'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.3/lib/active_record/fixtures.rb:792:in `block in require_fixture_classes'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.3/lib/active_record/fixtures.rb:790:in `each'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.3/lib/active_record/fixtures.rb:790:in `require_fixture_classes'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-4.0.3/lib/active_record/fixtures.rb:768:in `fixtures'
+D:/RubyOnRailsFirstSteps/demo_app/test/test_helper.rb:12:in `<class:TestCase>'
+D:/RubyOnRailsFirstSteps/demo_app/test/test_helper.rb:5:in `<top (required)>'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `require'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `block in require'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:214:in `load_dependency'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `require'
+D:/RubyOnRailsFirstSteps/demo_app/test/helpers/carts_helper_test.rb:1:in `<top (required)>'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `require'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `block in require'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:214:in `load_dependency'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activesupport-4.0.3/lib/active_support/dependencies.rb:229:in `require'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/test_unit/sub_test_task.rb:73:in `block (3 levels) in define'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/test_unit/sub_test_task.rb:73:in `each'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/test_unit/sub_test_task.rb:73:in `block (2 levels) in define'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/test_unit/sub_test_task.rb:72:in `each'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/test_unit/sub_test_task.rb:72:in `block in define'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:236:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:236:in `block in execute'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:231:in `each'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:231:in `execute'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:175:in `block in invoke_with_call_chain'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:168:in `invoke_with_call_chain'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:197:in `block in invoke_prerequisites'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:195:in `each'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:195:in `invoke_prerequisites'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:174:in `block in invoke_with_call_chain'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:168:in `invoke_with_call_chain'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:161:in `invoke'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/railties-4.0.3/lib/rails/test_unit/testing.rake:61:in `block in <top (required)>'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:236:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:236:in `block in execute'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:231:in `each'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:231:in `execute'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:175:in `block in invoke_with_call_chain'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:168:in `invoke_with_call_chain'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/task.rb:161:in `invoke'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:149:in `invoke_task'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:106:in `block (2 levels) in top_level'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:106:in `each'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:106:in `block in top_level'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:115:in `run_with_threads'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:100:in `top_level'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:78:in `block in run'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:165:in `standard_exception_handling'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/lib/rake/application.rb:75:in `run'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rake-10.1.1/bin/rake:33:in `<top (required)>'
+C:/RailsInstaller/Ruby1.9.3/bin/rake:23:in `load'
+C:/RailsInstaller/Ruby1.9.3/bin/rake:23:in `<main>'
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (1.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "carts"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "id") VALUES ('2014-03-11 04:42:48', '2014-03-11 04:42:48', 298486374)
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "comments"[0m
+SQLite3::SQLException: no such table: comments: DELETE FROM "comments"
+  [1m[35m (0.0ms)[0m  rollback transaction

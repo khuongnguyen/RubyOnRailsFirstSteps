@@ -1,0 +1,27 @@
+<div class="mobile-callout">
+	<div class="front-welcome">
+		<h1>Welcome to Y-Box</h1>
+		<div class="phone-image"></div>
+		<div class="store-links ">
+			<a target="_blank" class="store-button app-store" href="http://itunes.apple.com/us/app/twitter/id333903271?mt=8">Download on the App Store</a>
+			<a target="_blank" class="store-button google-play" href="https://play.google.com/store/apps/details?id=com.twitter.android&amp;referrer=utm_source%3Dsignin%26utm_medium%3Dtwitterdotcom%26utm_content%3Dstratos%26utm_campaign%3Dloggedout">Android app on Google play</a>
+		</div>
+	</div>
+
+	<div class="front-signin">
+
+		<%= form_for(:session, url: sessions_path, html: { class: "signin"}) do |f| %>
+
+		<%= f.text_field :email,  placeholder: "Username or email" %>
+
+		<%= f.password_field :password, placeholder: "Password" %>
+		<br/>
+		<%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+		<% end %>
+
+		<p>
+			New user? <%= link_to "Sign up now!", signup_path %>
+		</p>
+
+	</div>
+</div>
